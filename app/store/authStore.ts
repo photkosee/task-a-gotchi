@@ -6,6 +6,7 @@ type User = {
   isAuthenticated: boolean;
   username: string | null;
   profile: string | null;
+  profileLimit: string | null;
 };
   
 type AuthActions = {
@@ -23,11 +24,12 @@ const useAuthStore = create<User & AuthActions & ProfileActions>()(
       isAuthenticated: false,
       username: null,
       profile: null,
+      profileLimit: "1",
       login: (token: string, username: string, profile: string) => set({
         token: token, isAuthenticated: true, username: username, profile: profile
       }),
       logout: () => set({ token: null, isAuthenticated: false, username: null, profile: null }),
-      setProfile: (profile: string) => set({ profile: profile }),
+      setProfile: (profile: string) => set({ profile: profile, profileLimit: null }),
     }),
     { name: 'auth', getStorage: () => localStorage }
   )

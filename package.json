@@ -19,6 +19,7 @@
     "zustand-persist": "^0.4.0"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20.14.9",
     "@types/react": "^18",
     "@types/react-dom": "^18",
