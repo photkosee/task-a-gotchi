@@ -3,6 +3,7 @@
 - Next.js - Development environment
 - Tailwind CSS - CSS framework
 - MongoDB - NoSQL Database
+- Ant Design - Components library for User Interface
 - Zustand - State management tool
 - Zustand Persist - Persist state in a Zustand store
 - Prisma - Node.js and TypeScript ORM
