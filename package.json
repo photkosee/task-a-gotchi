@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@ant-design/nextjs-registry": "^1.0.0",
+    "@prisma/client": "^5.16.1",
     "bcryptjs": "^2.4.3",
     "jose": "^5.6.2",
     "next": "14.2.4",
