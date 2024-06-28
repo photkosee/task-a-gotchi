@@ -10,6 +10,7 @@ import {
   HomeOutlined,
   LogoutOutlined,
   UserOutlined,
+  TrophyOutlined,
 } from "@ant-design/icons";
 import useAuthStore from "@/app/store/authStore";
 
@@ -54,11 +55,19 @@ const Header = () => {
       },
     },
     {
+      label: "Leaderboard",
+      key: "3",
+      icon: <TrophyOutlined />,
+      onClick: () => {
+        router.push("/dashboard/leaderboard");
+      },
+    },
+    {
       type: "divider",
     },
     {
       label: "Logout",
-      key: "3",
+      key: "4",
       icon: <LogoutOutlined />,
       danger: true,
       onClick: () => {
