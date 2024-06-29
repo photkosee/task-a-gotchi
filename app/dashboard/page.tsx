@@ -8,6 +8,7 @@ import CountUp from "react-countup";
 import type { StatisticProps } from "antd";
 
 import HabitCard from "./components/HabitCard";
+import useAuthStore from "../store/authStore";
 
 const formatter: StatisticProps["formatter"] = (value) => (
   <CountUp end={value as number} separator="," />
@@ -16,6 +17,8 @@ const formatter: StatisticProps["formatter"] = (value) => (
 export default function Dashboard() {
   const [open, setOpen] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);
+  const score = useAuthStore((state) => state.score);
+  const streaks = useAuthStore((state) => state.streaks);
 
   const showModal = () => {
     setOpen(true);
@@ -52,7 +55,7 @@ export default function Dashboard() {
           />
           <div className="flex flex-col gap-y-0 items-center pt-7">
             <div className="text-3xl font-bold text-[#2f496d]">
-              <Statistic value={77} formatter={formatter} />
+              <Statistic value={streaks} formatter={formatter} />
             </div>
             <div className="text-[#2f496d]/80">Days</div>
           </div>
@@ -65,7 +68,7 @@ export default function Dashboard() {
           <div className="flex flex-col gap-y-0">
             <div className="text-[#2f496d]/80">Score</div>
             <div className="text-3xl font-semibold text-[#2f496d]">
-              <Statistic value={77} formatter={formatter} />
+              <Statistic value={score} formatter={formatter} />
             </div>
           </div>
         </div>
