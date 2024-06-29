@@ -2,10 +2,16 @@
 
 import React, { useState } from "react";
 
-import { Button, Modal, Form, DatePicker, Input } from "antd";
+import { Button, Modal, Form, DatePicker, Input, Statistic } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
+import CountUp from "react-countup";
+import type { StatisticProps } from "antd";
 
 import HabitCard from "./components/HabitCard";
+
+const formatter: StatisticProps["formatter"] = (value) => (
+  <CountUp end={value as number} separator="," />
+);
 
 export default function Dashboard() {
   const [open, setOpen] = useState(false);
@@ -45,7 +51,9 @@ export default function Dashboard() {
             transform -translate-x-1/2 -translate-y-1/2"
           />
           <div className="flex flex-col gap-y-0 items-center pt-7">
-            <div className="text-3xl font-bold text-[#2f496d]">222</div>
+            <div className="text-3xl font-bold text-[#2f496d]">
+              <Statistic value={77} formatter={formatter} />
+            </div>
             <div className="text-[#2f496d]/80">Days</div>
           </div>
         </div>
@@ -56,7 +64,9 @@ export default function Dashboard() {
           <img src="./trophy.svg" alt="trophy" className="h-20" />
           <div className="flex flex-col gap-y-0">
             <div className="text-[#2f496d]/80">Score</div>
-            <div className="text-3xl font-semibold text-[#2f496d]">777</div>
+            <div className="text-3xl font-semibold text-[#2f496d]">
+              <Statistic value={77} formatter={formatter} />
+            </div>
           </div>
         </div>
       </div>

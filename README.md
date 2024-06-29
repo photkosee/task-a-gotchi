@@ -28,6 +28,7 @@ mental health)
 - bcryptjs - Encryption
 - jose - Authentication
 - react-github-contribution-calendar - Contribution component
+- react-countup - Counting animation with Ant Design
 
 ## Author
 

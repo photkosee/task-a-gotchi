@@ -24,11 +24,11 @@ export default function CollectionPage() {
       className="flex min-h-[calc(100vh-120px)] flex-col justify-center items-center
       bg-white px-14 py-28"
     >
-      <div className="w-full flex flex-col gap-7 max-w-md justify-start items-center">
+      <div className="w-full flex flex-col gap-7 max-w-xl justify-start items-center">
         <Breadcrumb items={breadcrumbItems} style={{ alignSelf: "start" }} />
         <div className="text-3xl font-bold text-[#2f496d]">Gotchi Nest</div>
         <div
-          className="w-[calc(75vw)] h-[calc(75vw)] max-w-2xl max-h-[672px] sticky
+          className="w-[calc(75vw)] h-[calc(75vw)] max-w-xl max-h-[576px] sticky
           overflow-hidden border-[10px] lg:border-[12px] border-[#6D5719] rounded-xl"
         >
           <div className="grid grid-cols-4 grid-rows-4 absolute top-0 left-0 w-full h-full">
