@@ -1,3 +1,21 @@
+# <p align="center"><a href=""><img height="175" src="./public/logo2.svg"></a></p>
+
+<p align="center">Gamify your habits to beat your procrastination. <a href="">Try this out now!</a></p>
+
+## Problem Statement (2024 Flagship Hackathon)
+
+In a world where screens have become the new digital playground, every need is just a click away. The new
+generation has now become one filled with ‘iPad kids’ - children who spend excessive amounts of time scrolling
+on TikTok or playing video games. However, as your parents always said, nothing is more important than your
+health! Sedentary lifestyles have become a growing concern due to physical inactivity, poor dietary habits, and
+mental health challenges.
+
+So, it’s time to be innovative and promote healthier habits! From your mental to your physical health - there are
+numerous avenues to explore and problems you could choose to solve. So what are you waiting for?
+
+Your Task: Create a technical (or non-technical) solution to address these problems (e.g. physical inactivity,
+mental health) 
+
 ## Built with
 
 - Next.js - Development environment
