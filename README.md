@@ -29,6 +29,7 @@ mental health)
 - jose - Authentication
 - react-github-contribution-calendar - Contribution component
 - react-countup - Counting animation with Ant Design
+- react-countdown-circle-timer - Countdown component
 
 ## Author
 

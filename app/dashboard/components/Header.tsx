@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { Avatar, Dropdown, MenuProps, Space } from "antd";
-
 import {
   AppstoreOutlined,
   HomeOutlined,
@@ -14,12 +13,14 @@ import {
   TrophyOutlined,
   TeamOutlined,
 } from "@ant-design/icons";
+
 import useAuthStore from "@/app/store/authStore";
 
 const Header = () => {
   const [top, setTop] = useState<boolean>(false);
   const profile = useAuthStore((state) => state.profile);
   const logout = useAuthStore((state) => state.logout);
+  const candy = useAuthStore((state) => state.candy);
   const router = useRouter();
 
   useEffect(() => {
@@ -105,22 +106,37 @@ const Header = () => {
           </div>
         </Link>
 
-        <Dropdown menu={{ items }} trigger={["click"]} placement="bottomRight">
-          <button>
-            <Space>
-              <Avatar
-                src={"https://api.dicebear.com/7.x/miniavs/svg?seed=" + profile}
-                style={{
-                  backgroundColor: "white",
-                  borderStyle: "solid",
-                  borderWidth: 1,
-                  borderColor: "#2f496d",
-                }}
-                size={50}
-              />
-            </Space>
-          </button>
-        </Dropdown>
+        <div className="flex items-center gap-x-3">
+          <div
+            className="px-2.5 py-1 bg-white border-[1px] border-[#2f496d] rounded-full
+            flex items-center gap-x-2"
+          >
+            <img src="./candy.svg" alt="candy" className="h-7" />
+            <div>{candy}</div>
+          </div>
+          <Dropdown
+            menu={{ items }}
+            trigger={["click"]}
+            placement="bottomRight"
+          >
+            <button>
+              <Space>
+                <Avatar
+                  src={
+                    "https://api.dicebear.com/7.x/miniavs/svg?seed=" + profile
+                  }
+                  style={{
+                    backgroundColor: "white",
+                    borderStyle: "solid",
+                    borderWidth: 1,
+                    borderColor: "#2f496d",
+                  }}
+                  size={50}
+                />
+              </Space>
+            </button>
+          </Dropdown>
+        </div>
       </div>
     </div>
   );

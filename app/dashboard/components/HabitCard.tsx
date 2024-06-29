@@ -1,16 +1,20 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { ColorPicker, Button } from "antd";
+import { ColorPicker, Button, Modal, Result } from "antd";
+import { SmileOutlined } from "@ant-design/icons";
 import Calendar from "react-github-contribution-calendar";
 
 import useAuthStore from "@/app/store/authStore";
 
 export default function HabitCard() {
+  const [open, setOpen] = useState(false);
   const [theme, setTheme] = useState("#1677ff");
   const [streaks, setStreaks] = useState(0);
   const setScore = useAuthStore((state) => state.setScore);
+  const setCandy = useAuthStore((state) => state.setCandy);
   const score = useAuthStore((state) => state.score);
+  const candy = useAuthStore((state) => state.candy);
   const [values, setValues] = useState<any>({
     "2024-09-23": 2,
     "2024-06-26": 2,
@@ -30,10 +34,16 @@ export default function HabitCard() {
     const formattedDate = `${year}-${month}-${day}`;
 
     setScore(score + 1);
+    setCandy(candy + 1);
     setValues((prevValues: any) => ({
       ...prevValues,
       [formattedDate]: 2,
     }));
+    setOpen(true);
+  };
+
+  const onClose = () => {
+    setOpen(false);
   };
 
   const countConsecutiveDays = () => {
@@ -116,6 +126,15 @@ export default function HabitCard() {
           </Button>
         </div>
       </div>
+
+      <Modal
+        title="Congratulations!"
+        open={open}
+        onOk={onClose}
+        onCancel={onClose}
+      >
+        <Result icon={<SmileOutlined />} title="Great, you did it!" />
+      </Modal>
     </div>
   );
 }

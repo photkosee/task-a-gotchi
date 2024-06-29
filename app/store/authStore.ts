@@ -9,6 +9,7 @@ type User = {
   profileLimit: string | null;
   streaks: number;
   score: number;
+  candy: number;
 };
   
 type AuthActions = {
@@ -23,6 +24,7 @@ type ProfileActions = {
 type TaskActions = {
   setStreaks: (streaks: number) => void;
   setScore: (score: number) => void;
+  setCandy: (candy: number) => void;
 }
 
 const useAuthStore = create<User & AuthActions & ProfileActions & TaskActions>()(
@@ -32,8 +34,9 @@ const useAuthStore = create<User & AuthActions & ProfileActions & TaskActions>()
       username: null,
       profile: null,
       profileLimit: "1",
-      streaks: 11,
+      streaks: 17,
       score: 57,
+      candy: 0,
       login: (token: string, username: string, profile: string) => set({
         token: token, isAuthenticated: true, username: username, profile: profile
       }),
@@ -41,6 +44,7 @@ const useAuthStore = create<User & AuthActions & ProfileActions & TaskActions>()
       setProfile: (profile: string) => set({ profile: profile, profileLimit: null }),
       setStreaks: (streaks: number) => set({ streaks: streaks }),
       setScore: (score: number) => set({ score: score }),
+      setCandy: (candy: number) => set({ candy: candy }),
     }),
     { name: 'auth', getStorage: () => localStorage }
   )

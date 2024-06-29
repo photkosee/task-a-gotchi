@@ -1,9 +1,13 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 
 import { Breadcrumb } from "antd";
 import { HomeOutlined, AppstoreOutlined } from "@ant-design/icons";
+import Link from "next/link";
 
 export default function CollectionPage() {
+  const [animal, setAnimal] = useState(localStorage.getItem("gotchi") || "0");
   const breadcrumbItems = [
     {
       href: "/dashboard",
@@ -18,6 +22,11 @@ export default function CollectionPage() {
       ),
     },
   ];
+
+  useEffect(() => {
+    const tmp = localStorage.getItem("gotchi");
+    setAnimal(tmp || "0");
+  }, []);
 
   return (
     <div
@@ -42,6 +51,25 @@ export default function CollectionPage() {
                 }}
               />
             ))}
+          </div>
+
+          <div className="grid grid-cols-4 grid-rows-4 absolute top-0 left-0 w-full h-full z-50">
+            <Link
+              href="/dashboard/nest/eggs"
+              className="flex w-full justify-center items-center"
+            >
+              <div className="text-4xl md:text-5xl lg:text-7xl animate-bounce">
+                {animal === "1" ? "🐨" : "🥚"}
+              </div>
+            </Link>
+            <Link
+              href="/dashboard/nest/gotchis"
+              className="flex w-full justify-center items-center"
+            >
+              <div className="text-4xl md:text-5xl lg:text-7xl animate-bounce">
+                🐋
+              </div>
+            </Link>
           </div>
         </div>
       </div>

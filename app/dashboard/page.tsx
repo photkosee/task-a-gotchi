@@ -33,7 +33,6 @@ export default function Dashboard() {
   };
 
   const handleCancel = () => {
-    console.log("Clicked cancel button");
     setOpen(false);
   };
 

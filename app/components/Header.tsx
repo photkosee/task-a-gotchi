@@ -4,6 +4,12 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { Button } from "antd";
+import CountUp from "react-countup";
+import type { StatisticProps } from "antd";
+
+const formatter: StatisticProps["formatter"] = (value) => (
+  <CountUp end={value as number} separator="," />
+);
 
 const Header = () => {
   const [top, setTop] = useState<boolean>(false);
