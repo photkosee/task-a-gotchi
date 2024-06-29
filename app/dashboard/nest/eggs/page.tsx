@@ -59,14 +59,16 @@ export default function IncubatorPage() {
         >
           <div className="relative">
             <div
-              className="text-4xl md:text-5xl lg:text-7xl absolute top-1/2 left-1/2
-              transform -translate-x-1/2 -translate-y-1/2"
+              className={`text-4xl md:text-5xl lg:text-7xl absolute top-1/2 left-1/2
+              transform -translate-x-1/2 -translate-y-1/2 ${
+                loadings && "animate-pulse"
+              }`}
             >
               🥚
             </div>
             <CountdownCircleTimer
               isPlaying={loadings}
-              duration={3.5}
+              duration={5}
               colors={"#2f496d"}
               onComplete={() => {
                 setLoadings(false);
