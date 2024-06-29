@@ -1,16 +1,18 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { Avatar, Dropdown, MenuProps, Space } from "antd";
 
 import {
-  AppstoreAddOutlined,
+  AppstoreOutlined,
   HomeOutlined,
   LogoutOutlined,
   UserOutlined,
   TrophyOutlined,
+  TeamOutlined,
 } from "@ant-design/icons";
 import useAuthStore from "@/app/store/authStore";
 
@@ -49,14 +51,22 @@ const Header = () => {
     {
       label: "Nest",
       key: "2",
-      icon: <AppstoreAddOutlined />,
+      icon: <AppstoreOutlined />,
       onClick: () => {
         router.push("/dashboard/nest");
       },
     },
     {
-      label: "Leaderboard",
+      label: "Events",
       key: "3",
+      icon: <TeamOutlined />,
+      onClick: () => {
+        router.push("/dashboard/events");
+      },
+    },
+    {
+      label: "Leaderboard",
+      key: "4",
       icon: <TrophyOutlined />,
       onClick: () => {
         router.push("/dashboard/leaderboard");
@@ -67,7 +77,7 @@ const Header = () => {
     },
     {
       label: "Logout",
-      key: "4",
+      key: "5",
       icon: <LogoutOutlined />,
       danger: true,
       onClick: () => {
@@ -84,7 +94,16 @@ const Header = () => {
       }`}
     >
       <div className="px-7 flex justify-between items-center max-w-5xl mx-auto">
-        <div>Logo</div>
+        <Link href="/dashboard" passHref>
+          <div
+            className={`flex flex-row items-center gap-x-1.5 font-bold ${
+              top ? "text-white" : "text-[#2f496d]"
+            } transform transition-all duration-[0.35s]`}
+          >
+            <img src="./logo.svg" alt="logo" className="h-12" />
+            Task A Gotchi
+          </div>
+        </Link>
 
         <Dropdown menu={{ items }} trigger={["click"]} placement="bottomRight">
           <button>

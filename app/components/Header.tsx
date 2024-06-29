@@ -24,14 +24,23 @@ const Header = () => {
       }`}
     >
       <div className="px-7 flex justify-between items-center max-w-5xl mx-auto">
-        <div>Logo</div>
+        <Link href="/" passHref>
+          <div
+            className={`flex flex-row items-center gap-x-1.5 font-bold ${
+              top ? "text-white" : "text-[#2f496d]"
+            } transform transition-all duration-[0.35s]`}
+          >
+            <img src="./logo.svg" alt="logo" className="h-12" />
+            Task A Gotchi
+          </div>
+        </Link>
         <Link href="/login" passHref>
           <Button
             type="default"
             size="large"
             style={{ fontWeight: "700", color: "#2f496d" }}
           >
-            Login
+            Get Started
           </Button>
         </Link>
       </div>

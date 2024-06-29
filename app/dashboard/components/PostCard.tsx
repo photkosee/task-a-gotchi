@@ -35,16 +35,30 @@ const PostCard = ({ image, title, description }: PostCardProps) => {
       hoverable
       style={{ width: 270 }}
       cover={<img alt="post" src={imageSource} className="h-[185px]" />}
-      actions={[<HeartOutlined key="like" />, <LoginOutlined key="join" />]}
+      actions={[
+        <div key="join" className="flex gap-1 items-center justify-center">
+          <LoginOutlined />
+          Interest
+        </div>,
+      ]}
     >
       <Skeleton loading={loading} avatar active>
         <Meta
           avatar={
-            <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=2" />
+            <Avatar
+              src="https://api.dicebear.com/7.x/miniavs/svg?seed=2"
+              style={{
+                backgroundColor: "white",
+                borderStyle: "solid",
+                borderWidth: 1,
+                borderColor: "#2f496d",
+              }}
+            />
           }
           title="Card title"
           description="This is the description asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfsdfasdfsd"
         />
+        <div>asdfadsf</div>
       </Skeleton>
     </Card>
   );

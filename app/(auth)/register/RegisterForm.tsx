@@ -51,13 +51,13 @@ export default function RegisterForm() {
       } else {
         setTimeout(() => {
           setLoading(false);
-        }, 700);
+        }, 500);
       }
     } else {
       openNotificationWithIcon("error", "Error", res.error);
       setTimeout(() => {
         setLoading(false);
-      }, 700);
+      }, 500);
     }
   };
 
@@ -70,17 +70,21 @@ export default function RegisterForm() {
       login(res.token, res.username, res.profile);
       setTimeout(() => {
         router.push("/dashboard");
-      }, 700);
+      }, 500);
     } else {
       setTimeout(() => {
         setLoading(false);
-      }, 700);
+      }, 500);
     }
   };
 
   return (
-    <div className="z-10 mx-auto flex max-w-[300px] flex-col items-center justify-center">
+    <div
+      className="z-10 mx-auto flex max-w-[300px] flex-col items-center
+      justify-center gap-y-3"
+    >
       {contextHolder}
+      <h1 className="text-2xl font-semibold text-[#2f496d]">Register</h1>
       <Form
         name="normal_login"
         className="login-form"

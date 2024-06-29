@@ -14,8 +14,63 @@ datasource db {
 }
 
 model User {
-  id       String @id @default(auto()) @map("_id") @db.ObjectId
-  password String
-  username String @unique
-  profile  Int
+  id                  String @id @default(auto()) @map("_id") @db.ObjectId
+  password            String
+  username            String @unique
+  profile             Int
+  pets                Int[]
+  tasks               Task[]
+  posts               Post[]
+  streaks             Int
+  lastActive          DateTime
+  eventParticipations EventParticipation[]
+}
+
+model Task {
+  id            String @id @default(auto()) @map("_id") @db.ObjectId
+  name          String
+  user          User   @relation(fields: [userId], references: [id])
+  userId        String @db.ObjectId
+  completions   TaskCompletion[]
+}
+
+model Post {
+  id                    String @id @default(auto()) @map("_id") @db.ObjectId
+  title                 String
+  description           String
+  category              PostCategory
+  startTime             DateTime
+  endTime               DateTime
+  location              String
+  userId                String @db.ObjectId
+  user                  User @relation(fields: [userId], references: [id])
+  eventParticipations   EventParticipation[]
+}
+
+model EventParticipation {
+  id     String @id @default(auto()) @map("_id") @db.ObjectId
+  userId String @db.ObjectId
+  user   User @relation(fields: [userId], references: [id])
+  postId String @db.ObjectId
+  post   Post @relation(fields: [postId], references: [id])
+}
+
+model Score {
+  id     String @id @default(auto()) @map("_id") @db.ObjectId
+  user   User   @relation(fields: [userId], references: [id])
+  userId String @db.ObjectId
+  value  Int
+}
+
+model Streak {
+  id     String @id @default(auto()) @map("_id") @db.ObjectId
+  user   User   @relation(fields: [userId], references: [id])
+  userId String @db.ObjectId
+  value  Int
+}
+
+enum PostCategory {
+  FITNESS
+  READING_STUDY
+  BREAKING_ADDICTION
 }

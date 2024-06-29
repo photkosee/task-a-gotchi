@@ -72,7 +72,7 @@ export default function ProfilePage() {
 
   return (
     <div
-      className="flex min-h-[calc(100vh-120px)] flex-col justify-center items-center
+      className="flex min-h-[calc(100vh-120px)] flex-col items-center
       bg-white px-14 py-28"
     >
       {contextHolder}

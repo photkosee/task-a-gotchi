@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { Button, Modal } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 
-import PostCard from "./components/PostCard";
+import PostCard from "../components/PostCard";
 
 export default function Dashboard() {
   const [open, setOpen] = useState(false);
@@ -38,7 +38,7 @@ export default function Dashboard() {
       <div className="w-full flex flex-col gap-10 max-w-md">
         <Button type="primary" onClick={showModal}>
           <PlusOutlined />
-          Add Habit
+          Host an Event
         </Button>
       </div>
       <PostCard image={2} title="Post 1" description="This is post 1" />

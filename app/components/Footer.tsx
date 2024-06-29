@@ -14,7 +14,10 @@ const Footer = () => {
         max-w-5xl mx-auto sm:flex-row gap-y-7 gap-x-5"
       >
         <div className="order-2 sm:order-1 flex flex-col gap-3 max-w-xl">
-          <div>Logo</div>
+          <div className="flex items-center gap-x-1.5 font-bold text-[#2f496d]">
+            <img src="./logo.svg" alt="logo" className="h-12" />
+            Task A Gotchi
+          </div>
           <div>
             This is a project submitting for UNSW Flagship Hackathon 2024 with a
             theme of promoting healthier habits.
