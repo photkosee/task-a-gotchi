@@ -36,12 +36,28 @@ export default function Dashboard() {
       bg-white px-14 py-28 gap-y-12"
     >
       <div className="w-full flex flex-col gap-10 max-w-md">
-        <Button type="primary" onClick={showModal}>
+        {/* <Button type="primary" onClick={showModal}>
           <PlusOutlined />
           Host an Event
-        </Button>
+        </Button> */}
       </div>
-      <PostCard image={2} title="Post 1" description="This is post 1" />
+      <div className="w-full flex flex-wrap gap-3 max-w-5xl justify-center">
+        <PostCard
+          image={2}
+          title="Therapy Session with Dr. Alex"
+          description="If you are interested in therapy with Dr. Alex, please join us"
+        />
+        <PostCard
+          image={1}
+          title="Yoga Group Session"
+          description="Today we are practicing yoga with our friends for a group of 5"
+        />
+        <PostCard
+          image={3}
+          title="Discussion Session"
+          description="Today we are discussing about the book Animal Farm"
+        />
+      </div>
       <Modal
         title="Title"
         open={open}

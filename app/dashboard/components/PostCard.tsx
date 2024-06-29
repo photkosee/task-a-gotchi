@@ -46,7 +46,7 @@ const PostCard = ({ image, title, description }: PostCardProps) => {
         <Meta
           avatar={
             <Avatar
-              src="https://api.dicebear.com/7.x/miniavs/svg?seed=2"
+              src={`https://api.dicebear.com/7.x/miniavs/svg?seed=` + image}
               style={{
                 backgroundColor: "white",
                 borderStyle: "solid",
@@ -55,10 +55,9 @@ const PostCard = ({ image, title, description }: PostCardProps) => {
               }}
             />
           }
-          title="Card title"
-          description="This is the description asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfsdfasdfsd"
+          title={title}
+          description={description}
         />
-        <div>asdfadsf</div>
       </Skeleton>
     </Card>
   );

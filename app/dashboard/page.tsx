@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-import { Button, Modal } from "antd";
+import { Button, Modal, Form, DatePicker, Input } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 
 import HabitCard from "./components/HabitCard";
@@ -10,14 +10,12 @@ import HabitCard from "./components/HabitCard";
 export default function Dashboard() {
   const [open, setOpen] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);
-  const [modalText, setModalText] = useState("Content of the modal");
 
   const showModal = () => {
     setOpen(true);
   };
 
   const handleOk = () => {
-    setModalText("The modal will be closed after two seconds");
     setConfirmLoading(true);
     setTimeout(() => {
       setOpen(false);
@@ -55,7 +53,7 @@ export default function Dashboard() {
           className="w-full flex-1 rounded-xl border-[1px] p-3 min-h-[150px]
           flex items-center justify-center gap-x-3.5"
         >
-          <img src="./trophy.svg" alt="streak" className="h-20" />
+          <img src="./trophy.svg" alt="trophy" className="h-20" />
           <div className="flex flex-col gap-y-0">
             <div className="text-[#2f496d]/80">Score</div>
             <div className="text-3xl font-semibold text-[#2f496d]">777</div>
@@ -75,13 +73,20 @@ export default function Dashboard() {
       </div>
 
       <Modal
-        title="Title"
+        title="Create your new habit"
         open={open}
         onOk={handleOk}
         confirmLoading={confirmLoading}
         onCancel={handleCancel}
       >
-        <p>{modalText}</p>
+        <Form style={{ paddingTop: "20px" }}>
+          <Form.Item label="What's your new habit?">
+            <Input />
+          </Form.Item>
+          <Form.Item label="Until when?">
+            <DatePicker />
+          </Form.Item>
+        </Form>
       </Modal>
     </div>
   );

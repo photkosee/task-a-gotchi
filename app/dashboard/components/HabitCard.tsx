@@ -83,7 +83,7 @@ export default function HabitCard() {
             </div>
           </div>
           <div className="relative flex gap-x-1 items-center">
-            <img src="./trophy.svg" alt="streak" className="h-5" />
+            <img src="./trophy.svg" alt="trophy" className="h-5" />
             <div className="text-md font-semibold text-[#2f496d]">
               {Object.keys(values).length}
             </div>

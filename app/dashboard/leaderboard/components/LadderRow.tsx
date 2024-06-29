@@ -32,9 +32,11 @@ export default function LadderRow({
           }}
           size={37}
         />
+        <div className="truncate max-w-[70px] lg:max-w-[150px]">{name}</div>{" "}
       </div>
-      <div className="truncate max-w-[70px] lg:max-w-[150px]">{name}</div>{" "}
-      <div>{score}</div>
+      <div className="flex items-center gap-x-2">
+        <div>{score}</div>
+      </div>
     </div>
   );
 }
