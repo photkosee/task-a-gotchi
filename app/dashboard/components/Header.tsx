@@ -49,7 +49,7 @@ const Header = () => {
       },
     },
     {
-      label: "Nest",
+      label: "Gotchi Nest",
       key: "2",
       icon: <AppstoreOutlined />,
       onClick: () => {

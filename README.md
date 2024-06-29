@@ -1,8 +1,8 @@
-# <p align="center"><a href=""><img height="175" src="./public/logo2.svg"></a></p>
+# <p align="center"><a href=""><img height="155" src="./public/logo2.svg"></a></p>
 
-<p align="center">Gamify your habits to beat your procrastination. <a href="">Try this out now!</a></p>
+<p align="center">Gamify your habits to beat your procrastination with Task A Gotchi. <a href="">Try this out now!</a></p>
 
-## Problem Statement (2024 Flagship Hackathon)
+## Problem Statement (2024 Flagship Hackathon UNSW)
 
 In a world where screens have become the new digital playground, every need is just a click away. The new
 generation has now become one filled with ‘iPad kids’ - children who spend excessive amounts of time scrolling
@@ -27,6 +27,7 @@ mental health)
 - Prisma - Node.js and TypeScript ORM
 - bcryptjs - Encryption
 - jose - Authentication
+- react-github-contribution-calendar - Contribution component
 
 ## Author
 
