@@ -55,19 +55,44 @@ export default function CollectionPage() {
 
           <div className="grid grid-cols-4 grid-rows-4 absolute top-0 left-0 w-full h-full z-50">
             <Link
-              href="/dashboard/nest/eggs"
-              className="flex w-full justify-center items-center"
-            >
-              <div className="text-4xl md:text-5xl lg:text-7xl animate-bounce">
-                {animal === "1" ? "🐨" : "🥚"}
-              </div>
-            </Link>
-            <Link
               href="/dashboard/nest/gotchis"
               className="flex w-full justify-center items-center"
             >
               <div className="text-4xl md:text-5xl lg:text-7xl animate-bounce">
                 🐋
+              </div>
+            </Link>
+
+            <div className="flex w-full justify-center items-center">
+              <div className="text-4xl md:text-5xl lg:text-7xl animate-bounce">
+                🦐
+              </div>
+            </div>
+
+            <div className="flex w-full justify-center items-center">
+              <div className="text-4xl md:text-5xl lg:text-7xl animate-bounce">
+                🦍
+              </div>
+            </div>
+
+            <div className="flex w-full justify-center items-center">
+              <div className="text-4xl md:text-5xl lg:text-7xl animate-bounce">
+                🦑
+              </div>
+            </div>
+
+            <div className="flex w-full justify-center items-center">
+              <div className="text-4xl md:text-5xl lg:text-7xl animate-bounce">
+                🐌
+              </div>
+            </div>
+
+            <Link
+              href="/dashboard/nest/eggs"
+              className="flex w-full justify-center items-center"
+            >
+              <div className="text-4xl md:text-5xl lg:text-7xl animate-bounce">
+                {animal === "1" ? "🦦" : "🥚"}
               </div>
             </Link>
           </div>

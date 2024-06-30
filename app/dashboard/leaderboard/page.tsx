@@ -7,6 +7,7 @@ import { HomeOutlined, TrophyOutlined } from "@ant-design/icons";
 
 import AllTime from "./components/AllTime";
 import Streak from "./components/Streak";
+import GotchiShowcase from "./components/GotchiShowcase";
 
 export default function LeaderboardPage() {
   const [value, setValue] = useState<string | number>("All-time");
@@ -38,14 +39,18 @@ export default function LeaderboardPage() {
           <h1 className="text-3xl font-bold text-[#2f496d]">Leaderboard</h1>
           <div className="w-[270px]">
             <Segmented
-              options={["All-time", "Streak"]}
+              options={["All-time", "Streak", "Gotchi"]}
               block
               value={value}
               onChange={setValue}
             />
           </div>
         </div>
-        <div>{value === "All-time" ? <AllTime /> : <Streak />}</div>
+        <div>
+          {value === "All-time" && <AllTime />}
+          {value === "Streak" && <Streak />}
+          {value === "Gotchi" && <GotchiShowcase />}
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 # <p align="center"><a href=""><img height="155" src="./public/logo2.svg"></a></p>
 
-<p align="center">Gamify your habits to beat your procrastination with Task A Gotchi. <a href="">Try this out now!</a></p>
+<p align="center">Gamify your habits to beat your procrastination with Task A Gotchi.</p>
 
 ## Problem Statement (2024 Flagship Hackathon UNSW)
 
@@ -14,7 +14,9 @@ So, it’s time to be innovative and promote healthier habits! From your mental 
 numerous avenues to explore and problems you could choose to solve. So what are you waiting for?
 
 Your Task: Create a technical (or non-technical) solution to address these problems (e.g. physical inactivity,
-mental health) 
+mental health)
+
+## What is Task A Gotchi?
 
 ## Built with
 

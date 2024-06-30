@@ -94,7 +94,7 @@ export default function IncubatorPage() {
         onCancel={handleCancel}
       >
         <div className="flex items-center justify-center text-3xl py-10">
-          You hatched a 🐨!
+          You hatched a 🦦!
         </div>
       </Modal>
     </div>
