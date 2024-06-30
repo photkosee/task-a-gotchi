@@ -10,6 +10,8 @@ import type { StatisticProps } from "antd";
 import HabitCard from "./components/HabitCard";
 import useAuthStore from "../store/authStore";
 
+import { habitsData } from "./mockData";
+
 const formatter: StatisticProps["formatter"] = (value) => (
   <CountUp end={value as number} separator="," />
 );
@@ -81,7 +83,14 @@ export default function Dashboard() {
       </div>
 
       <div className="w-full flex flex-col gap-2 max-w-lg sm:justify-between">
-        <HabitCard />
+        {habitsData.map((habit) => (
+          <HabitCard
+            key={habit.task}
+            task={habit.task}
+            valuesInput={habit.dates}
+            untilInput={habit.until}
+          />
+        ))}
       </div>
 
       <Modal

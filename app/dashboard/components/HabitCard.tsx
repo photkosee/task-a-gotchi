@@ -7,7 +7,17 @@ import Calendar from "react-github-contribution-calendar";
 
 import useAuthStore from "@/app/store/authStore";
 
-export default function HabitCard() {
+interface HabitCardProps {
+  task: string;
+  untilInput: string;
+  valuesInput: any;
+}
+
+export default function HabitCard({
+  task,
+  untilInput,
+  valuesInput,
+}: HabitCardProps) {
   const [open, setOpen] = useState(false);
   const [theme, setTheme] = useState("#1677ff");
   const [streaks, setStreaks] = useState(0);
@@ -15,14 +25,9 @@ export default function HabitCard() {
   const setCandy = useAuthStore((state) => state.setCandy);
   const score = useAuthStore((state) => state.score);
   const candy = useAuthStore((state) => state.candy);
-  const [values, setValues] = useState<any>({
-    "2024-09-23": 2,
-    "2024-06-26": 2,
-    "2024-06-27": 2,
-    "2024-06-28": 2,
-  });
+  const [values, setValues] = useState<any>(valuesInput);
 
-  const until = "2024-12-30";
+  const until = untilInput;
   const panelAttributes = { rx: 3, ry: 3 };
 
   const onTick = () => {
@@ -87,9 +92,7 @@ export default function HabitCard() {
         className="w-full flex flex-col md:flex-row md:justify-between items-center
         gap-y-3 gap-x-5"
       >
-        <div className="max-w-[180px] md:max-w-[250px] truncate">
-          Finish this hackathon
-        </div>
+        <div className="max-w-[180px] md:max-w-[250px] truncate">{task}</div>
         <div className="flex gap-x-5 items-center">
           <div className="relative flex gap-x-1 items-center">
             <img src="./fire.svg" alt="streak" className="h-[18px]" />
@@ -133,7 +136,10 @@ export default function HabitCard() {
         onOk={onClose}
         onCancel={onClose}
       >
-        <Result icon={<SmileOutlined />} title="Great, you did it!" />
+        <Result
+          icon={<SmileOutlined />}
+          title="Great, you did it! You got an egg!"
+        />
       </Modal>
     </div>
   );

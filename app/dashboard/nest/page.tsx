@@ -87,6 +87,24 @@ export default function CollectionPage() {
               </div>
             </div>
 
+            <div className="flex w-full justify-center items-center">
+              <div className="text-4xl md:text-5xl lg:text-7xl animate-bounce">
+                🥚
+              </div>
+            </div>
+
+            <div className="flex w-full justify-center items-center">
+              <div className="text-4xl md:text-5xl lg:text-7xl animate-bounce">
+                🥚
+              </div>
+            </div>
+
+            <div className="flex w-full justify-center items-center">
+              <div className="text-4xl md:text-5xl lg:text-7xl animate-bounce">
+                🥚
+              </div>
+            </div>
+
             <Link
               href="/dashboard/nest/eggs"
               className="flex w-full justify-center items-center"
