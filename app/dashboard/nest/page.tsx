@@ -35,7 +35,10 @@ export default function CollectionPage() {
     >
       <div className="w-full flex flex-col gap-7 max-w-xl justify-start items-center">
         <Breadcrumb items={breadcrumbItems} style={{ alignSelf: "start" }} />
-        <div className="text-3xl font-bold text-[#2f496d]">Gotchi Nest</div>
+        <div className="flex flex-col gap-1 items-center">
+          <div className="text-3xl font-bold text-[#2f496d]">Gotchi Nest</div>
+          <p>This is where your gotchis live!</p>
+        </div>
         <div
           className="w-[calc(75vw)] h-[calc(75vw)] max-w-xl max-h-[576px] sticky
           overflow-hidden border-[10px] lg:border-[12px] border-[#6D5719] rounded-xl"
