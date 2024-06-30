@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -18,12 +12,24 @@ model User {
   password            String
   username            String @unique
   profile             Int
-  pets                Int[]
+  pets                Pet[]
   tasks               Task[]
   posts               Post[]
-  streaks             Int
   lastActive          DateTime
   eventParticipations EventParticipation[]
+  scores              Score[]
+  streaks             Streak[]
+  candy               Int
+  totalScore          Int @default(0) // Total score for the leaderboard
+  totalStreak         Int @default(0) // Total streak for the leaderboard
+}
+
+model Pet {
+  id     String @id @default(auto()) @map("_id") @db.ObjectId
+  emoji  String
+  heart  Int
+  user   User   @relation(fields: [userId], references: [id])
+  userId String @db.ObjectId
 }
 
 model Task {
@@ -31,7 +37,7 @@ model Task {
   name          String
   user          User   @relation(fields: [userId], references: [id])
   userId        String @db.ObjectId
-  completions   TaskCompletion[]
+  completions   DateTime[]
 }
 
 model Post {

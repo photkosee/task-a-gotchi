@@ -1,4 +1,4 @@
-# <p align="center"><a href=""><img height="155" src="./public/logo2.svg"></a></p>
+# <p align="center"><a href=""><img height="155" src="./public/logo2.svg" /></a></p>
 
 <p align="center">Gamify your habits to beat your procrastination with Task A Gotchi.</p>
 
@@ -17,6 +17,7 @@ Your Task: Create a technical (or non-technical) solution to address these probl
 mental health)
 
 ## What is Task A Gotchi?
+
 
 ## Built with
 
@@ -42,3 +43,6 @@ Phot Koseekrainiramon (Project Lead & Fullstack Developer)
 Dalton Emanuel Mojica (Designer & Presenter)
 - [LinkedIn](https://www.linkedin.com/in/daltonmojica/)
 - [GitHub](https://github.com/daltonmojica)
+
+## Database Design (Prototype)
+<img src="./public/prisma-erd.svg" />
