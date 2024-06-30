@@ -1,6 +1,6 @@
 # <p align="center"><a href=""><img height="155" src="./public/logo2.svg" /></a></p>
 
-<p align="center">Gamify your habits to beat your procrastination with Task A Gotchi.</p>
+<p align="center">Gamify your habits to beat your procrastination with Task A Gotchi. <a href="https://youtu.be/wccJ9Hjj1_E?si=_79YuPlbk2iWSV8M">Watch the demo here!</a></p>
 
 ## Problem Statement (2024 Flagship Hackathon UNSW)
 
