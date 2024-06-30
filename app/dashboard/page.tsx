@@ -19,6 +19,7 @@ const formatter: StatisticProps["formatter"] = (value) => (
 export default function Dashboard() {
   const [open, setOpen] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);
+  const [create, setCreate] = useState(false);
   const score = useAuthStore((state) => state.score);
   const streaks = useAuthStore((state) => state.streaks);
 
@@ -31,6 +32,7 @@ export default function Dashboard() {
     setTimeout(() => {
       setOpen(false);
       setConfirmLoading(false);
+      setCreate(true);
     }, 2000);
   };
 
@@ -83,6 +85,13 @@ export default function Dashboard() {
       </div>
 
       <div className="w-full flex flex-col gap-2 max-w-lg sm:justify-between">
+        {create && (
+          <HabitCard
+            task="Read a book"
+            valuesInput={{}}
+            untilInput="2024-12-31"
+          />
+        )}
         {habitsData.map((habit) => (
           <HabitCard
             key={habit.task}
