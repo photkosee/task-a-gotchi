@@ -2,7 +2,14 @@
 
 <p align="center">Gamify your habits to beat your procrastination with Task A Gotchi. <a href="https://youtu.be/wccJ9Hjj1_E?si=_79YuPlbk2iWSV8M">Watch the demo here!</a></p>
 
-## Problem Statement (2024 Flagship Hackathon UNSW)
+- [Problem Statement](#problem-statement)
+- [Inspiration](#inspiration)
+- [What it does?](#what-is-task-a-gotchi)
+- [Built With](#built-with)
+- [What's Next?](#whats-next)
+- [Author](#author)
+
+## Problem Statement
 
 In a world where screens have become the new digital playground, every need is just a click away. The new
 generation has now become one filled with ‘iPad kids’ - children who spend excessive amounts of time scrolling
@@ -13,8 +20,11 @@ mental health challenges.
 So, it’s time to be innovative and promote healthier habits! From your mental to your physical health - there are
 numerous avenues to explore and problems you could choose to solve. So what are you waiting for?
 
-Your Task: Create a technical (or non-technical) solution to address these problems (e.g. physical inactivity,
-mental health)
+## Inspiration
+
+Gacha games, collecting virtual pets, waifus, monsters. Hundreds of millions of people spend hours of their time each day interacting with their smart devices to get the next shiny virtual object. The gacha games market has grown into a multi-billion dollar industry over the past few decades. From the humble tamagotchis, to modern sensations like Genshin Impact, and powerhouses like Pokemon.
+
+Let’s face it, these games will never go away, and people seem addicted with their screens, just grinding to get the next new thing. So what if we lean into this concept and harness the power of gacha into building good, healthy habits?
 
 ## What is Task A Gotchi?
 
@@ -33,7 +43,7 @@ Lastly, users can compare and show their skills in the global stage, with the gl
 Task-a-Gotchi is the best way to manage and track your habits, as it combines the habit-forming qualities of gacha and gamification, with building healthy habits and routines for everyone.
 
 
-## Built with
+## Built With
 
 - Next.js - Development environment
 - Tailwind CSS - CSS framework
@@ -47,6 +57,25 @@ Task-a-Gotchi is the best way to manage and track your habits, as it combines th
 - react-github-contribution-calendar - Contribution component
 - react-countup - Counting animation with Ant Design
 - react-countdown-circle-timer - Countdown component
+
+## What’s Next?
+We would like to develop the gacha/gamification features more in future iterations
+- Gotchi evolution
+- Different Gotchi rarity tiers with varying egg incubation times and probabilities based on Streaks
+- Egg incubation features tied to more activities
+- More consumables/currency
+- More variation in nests/Gotchi habitats
+- Penalties for missing streaks
+
+We would also like to improve the habit tracking features of the app
+- Connecting to 3rd-party apps to more accurately track routines and adding more game rewards for doing so
+- Fitness apps for runs, workouts, cycles, swimming
+- Book apps for reading time/pages
+- Mindfulness apps for meditation
+- Routine categories that could link with Gotchi types, like Fitness, Mental Health, Addiction Prevention
+- More social features for events so users can compete with friends, family, or custom groups
+- Improved Profile system with Tracking
+- Addition of Friend system
 
 ## Author
 
