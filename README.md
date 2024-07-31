@@ -1,10 +1,11 @@
 # <p align="center"><a href=""><img height="155" src="./public/logo2.svg" /></a></p>
 
-<p align="center">Gamify your habits to beat your procrastination with Task A Gotchi. <a href="https://youtu.be/wccJ9Hjj1_E?si=_79YuPlbk2iWSV8M">Watch the demo here!</a></p>
+<p align="center">Gamify your habits to beat your procrastination with Task A Gotchi. <a href="https://youtu.be/wccJ9Hjj1_E?si=_79YuPlbk2iWSV8M">Watch the full demo video here!</a></p>
 
 - [Problem Statement](#problem-statement)
 - [Inspiration](#inspiration)
 - [What it does?](#what-is-task-a-gotchi)
+- [GIF Demonstration](#gif-demonstration)
 - [Built With](#built-with)
 - [What's Next?](#whats-next)
 - [Author](#author)
@@ -42,6 +43,9 @@ Lastly, users can compare and show their skills in the global stage, with the gl
 
 Task-a-Gotchi is the best way to manage and track your habits, as it combines the habit-forming qualities of gacha and gamification, with building healthy habits and routines for everyone.
 
+## GIF Demonstration
+
+![task-a-gotchi](https://github.com/user-attachments/assets/6adb095a-b200-4f42-ba03-46333e716d4c)
 
 ## Built With
 
