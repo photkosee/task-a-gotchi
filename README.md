@@ -2,6 +2,7 @@
 
 <p align="center">Gamify your habits to beat your procrastination with Task A Gotchi. <a href="https://youtu.be/wccJ9Hjj1_E?si=_79YuPlbk2iWSV8M">Watch the full demo video here!</a></p>
 
+## Table of Contents
 - [Problem Statement](#problem-statement)
 - [Inspiration](#inspiration)
 - [What it does?](#what-is-task-a-gotchi)
@@ -84,7 +85,7 @@ We would also like to improve the habit tracking features of the app
 ## Author
 
 Phot Koseekrainiramon (Project Lead & Fullstack Developer)
-- [LinkedIn](https://www.linkedin.com/in/phot-kosee/)
+- [LinkedIn](https://www.linkedin.com/in/photkosee/)
 - [GitHub](https://github.com/photkosee)
 
 Dalton Emanuel Mojica (Designer & Presenter)
